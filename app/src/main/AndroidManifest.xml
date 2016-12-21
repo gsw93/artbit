@@ -1,6 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="artbit.com.artbit">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!--일반 적인 자바에서는 public static void main(String args[]) : 메인 함수가 존재
+        Android 는 메인 함수가 존재 x
+        처음 실행 입구를 알 수 있게 가르쳐 주는 역할을 하는 것이 Manifest-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -8,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!--메인 activity-->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--사인업 activity-->
+        <activity android:name=".SignUpActivity" />
+
 
     </application>
 
